@@ -12,16 +12,16 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         OrderListRepo orderListRepo = new OrderListRepo(new ArrayList<>());
+        ProductRepo productRepo = new ProductRepo();
+        ShopService shopService = new ShopService(orderListRepo,productRepo);
 
-        ShopService shopService = new ShopService(orderListRepo);
+        Product tv = new Product(UUID.randomUUID().toString(), "LG TV", 214.4,1);
 
-        Product tv = new Product(UUID.randomUUID().toString(), "LG TV", 214.4,2);
-
-        Product laptop = new Product(UUID.randomUUID().toString(),"accer",1541.54,2);
+        Product laptop = new Product(UUID.randomUUID().toString(),"accer",1541.54,1);
 
         Product kopfrer = new Product(UUID.randomUUID().toString(),"Litium",154.14,1);
 
-        Product book = new Product(UUID.randomUUID().toString(),"maus",17.54,3);
+        Product book = new Product(UUID.randomUUID().toString(),"maus",17.54,1);
 
         List<Product> products = new ArrayList<>(List.of(tv,laptop,kopfrer,book));
 

@@ -42,4 +42,8 @@ public class OrderListRepo implements OrderRepoInterface {
     public void removeOrderById(String id){
         orders.removeIf(order -> order.id().equals(id));
     }
+
+    public void removeAllOrders(){
+        orders.clear();
+    }
 }

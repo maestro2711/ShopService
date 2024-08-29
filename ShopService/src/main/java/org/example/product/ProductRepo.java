@@ -14,10 +14,10 @@ public class ProductRepo {
         return products;
     }
 
-    public String  getProductById(int id){
+    public Product  getProductById(String id){
         for(Product product: products){
             if(product.id().equals(id)){
-                return product.name();
+                return product;
 
             }
         }
@@ -30,5 +30,9 @@ public class ProductRepo {
 
     public void removeProductById(int id){
         products.remove(id);
+    }
+
+    public void removeProduct(Product product){
+        products.remove(product);
     }
 }
