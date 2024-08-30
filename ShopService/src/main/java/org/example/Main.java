@@ -35,8 +35,5 @@ public class Main {
 
         System.out.println("Bestellung erstellt: " + myOrder);
 
-        myOrder = new Order(myOrder.id(), products,totalAmount);
-        System.out.println("Neue Bestellung:"  +myOrder);
-
     }
 }
